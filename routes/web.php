@@ -11,4 +11,12 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/{id}/home', 'UserController@index')->name('users.index');
