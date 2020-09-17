@@ -1,1 +1,4 @@
-これはユーザー用のカレンダー表示画面です。
+@foreach($users as $user)
+{{ $user->email}}
+@endforeach
+
