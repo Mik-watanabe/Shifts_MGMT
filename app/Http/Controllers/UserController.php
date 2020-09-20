@@ -8,12 +8,12 @@ use App\User;
 class UserController extends Controller
 {
     //
-    public function index()
+    public function index($id)
     {
-        $users = User::all();
+        $user = User::find($id);
 
        return view('users/index', [
-           'users' => $users,
+           'user' => $user,
        ]);
     }
 
