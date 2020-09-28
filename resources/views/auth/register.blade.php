@@ -25,6 +25,11 @@
                             </div>
                         </div>
 
+                        <div class="form-check">
+                        <input name="is_manager" class="form-check-input" type="checkbox" id="checkmanager" checked>
+                        <label class="form-check-label" for="checkmanager">＊マネージャーはチェックを入れてください。</label>
+                        </div>
+
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
