@@ -30,10 +30,17 @@ class LoginController extends Controller
     public function redirectPath()
     {
         $user = Auth::user();
+        if ($user->is_manager) {
 
-        return route('users.index', [
-            'id' => $user->id,
-        ]);
+            return 'admin/home';
+
+        } else {
+            
+            return route('users.index', [
+                'id' => $user->id,
+            ]);
+            
+        }
         
         
     }
