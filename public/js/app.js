@@ -19377,27 +19377,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/sass/fullcalendar.scss":
-/*!******************************************!*\
-  !*** ./resources/sass/fullcalendar.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleNotFoundError: Module not found: Error: Can't resolve '@fullcalendar/core/main.css' in '/Users/mikuwatanabe/Desktop/shifts_MGMT/resources/sass'\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/webpack/lib/Compilation.js:925:10\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/webpack/lib/NormalModuleFactory.js:401:22\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/webpack/lib/NormalModuleFactory.js:130:21\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/webpack/lib/NormalModuleFactory.js:224:22\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/neo-async/async.js:2830:7\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/neo-async/async.js:6877:13\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/webpack/lib/NormalModuleFactory.js:214:25\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:213:14\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:44:7\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:28:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/ModuleKindPlugin.js:30:40\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/forEachBail.js:30:14\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/UnsafeCachePlugin.js:44:7\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:67:43\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:16:1)\n    at /Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/enhanced-resolve/lib/Resolver.js:285:5\n    at eval (eval at create (/Users/mikuwatanabe/Desktop/shifts_MGMT/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:27:1)");
-
-/***/ }),
-
 /***/ 0:
-/*!************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/fullcalendar.scss ***!
-  \************************************************************************************************/
+/*!*************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/mikuwatanabe/Desktop/shifts_MGMT/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/mikuwatanabe/Desktop/shifts_MGMT/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/mikuwatanabe/Desktop/shifts_MGMT/resources/sass/fullcalendar.scss */"./resources/sass/fullcalendar.scss");
+module.exports = __webpack_require__(/*! /Users/mikuwatanabe/Desktop/shifts_MGMT/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
