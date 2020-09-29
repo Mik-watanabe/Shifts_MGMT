@@ -18,9 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//ユーザーのhomeページ
-Route::group(['middleware' => 'auth'], function(){
-Route::get('/{id}/home', 'UserController@index')->name('users.index');
 
-Route::get('/admin/home', 'ManagerController@index')->name('manager.index');
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/{id}/home', 'UserController@index')->name('users.index');
+    Route::get('/admin/home', 'ManagerController@index')->name('manager.index');
 });
