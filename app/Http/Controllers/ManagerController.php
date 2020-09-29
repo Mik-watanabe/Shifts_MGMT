@@ -11,6 +11,6 @@ class ManagerController extends Controller
     {
       
 
-       return view('manager/index');
+       return view('manager/index2');
     }
 }
