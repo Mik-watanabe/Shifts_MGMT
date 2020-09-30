@@ -1,15 +1,20 @@
 html, body {
-  background-color: #70c1b3;
-  color: #247ba0;
+  background-color:#edeec9;
+  color: #77bfa3;
   font-family: 'Fugaz One', cursive;
 } 
 .button{
   padding: 0.8em 2.2em;
-  background-color: #ead2ac;
+  background-color: #bfd8bd;
   border-radius: 3em;
+  border: dotted;
+  border-color: #ffd97d;
   text-decoration: none;
   color: #50514f;
   box-shadow: 0 0 8px gray;
+}
+.button:hover{
+  opacity: 0.8;
 }
 .content {
   display: block;
@@ -17,7 +22,7 @@ html, body {
 }
 .title{
   margin-bottom: 0.7em;
-  text-shadow: 2px 2px 4px #ffe066;
+  text-shadow: 2px 2px 4px gray;
 }
 
 
@@ -68,3 +73,4 @@ a{
     margin-left: 2.5em;
   }
 }
+
