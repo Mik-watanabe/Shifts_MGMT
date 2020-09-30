@@ -1,0 +1,28 @@
+.navbar-light .navbar-brand {
+  color: #77bfa3;
+  text-shadow: 1px 1px 1px gray;
+}
+.navbar-light  .navbar-brand:hover {
+  color: #d3a829b6;
+  text-shadow: 1px 1px 2px rgba(136, 128, 128, 0);
+}
+
+.navbar-light .navbar-nav .nav-link  {
+  color: #50514f;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+  color: #d3a829b6
+}
+
+.navbar-laravel{
+  background-color: #bfd8bd!important;
+}
+body{
+  background-color: #edeec9;
+}
+
+div .card{
+  border: dotted;
+  border-color: #ffd97d;
+}
