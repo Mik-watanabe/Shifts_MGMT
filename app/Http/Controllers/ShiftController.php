@@ -9,17 +9,23 @@ use Illuminate\Support\Facades\Auth;
 class ShiftController extends Controller
 {
     //
-    public function setEvents(Request $request) 
-    {
-        Shift::create([
-            "user_id" => Auth::user()->id,
-            "shift_date" => $request->date,
-            "shift_start" => $request->start,
-            "shift_end" => $request->end
+    // public function index(){
 
-        ]);
-         
-        return response()->json($request->get('start'));
+    // }
+    public function index(Request $request) 
+   {
+    //     Shift::create([
+    //         "user_id" => Auth::user()->id,
+    //         "shift_date" => $request->date,
+    //         "shift_start" => $request->start,
+    //         "shift_end" => $request->end
+
+    //     ]);
+    $shifts = Shift::all();
+         return view('users/shifts',[
+             'shifts' => $shifts
+         ]);
+        // return response()->json($request->get('start'));
         
     }
     public function formatDate($date){

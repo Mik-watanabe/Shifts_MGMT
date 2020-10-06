@@ -33,3 +33,5 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::get('/user/home', 'UserController@index')->name('users.index');
         });
 });
+
+Route::get('/api/shifts', 'ShiftController@index');
