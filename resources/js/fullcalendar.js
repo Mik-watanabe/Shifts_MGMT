@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     timeZone: 'Asia/Tokyo', // momentTimezonePlugin
     defaultView: 'timeGridWeek',
 
-    events: []
+    events: 'user/home'
   });
 
   calendar.render();

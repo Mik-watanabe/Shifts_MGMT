@@ -13,15 +13,16 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <i class="fas fa-check" >登録完了</i><br>
+                    <i class="fas fa-check">登録完了</i><br>
 
-                    {{$user->name}}さんの会員登録が完了いたしました。<br>
-                    ご登録いただいた（メールアドレス）宛に、<br>
-                    お送りしましたURLをクリックしていただくと、<br>
-                    ログインページにアクセスできます。
+                   {{ $user->name }}さんの会員登録が完了いたしました。<br>
+                    ご登録いただいたメールアドレス（{{ $user->email }}）宛に、
+                    お送りしましたURLからログインページにアクセスできます。
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
