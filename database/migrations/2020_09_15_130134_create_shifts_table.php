@@ -14,7 +14,7 @@ class CreateShiftsTable extends Migration
     public function up()
     {
         Schema::create('shifts', function (Blueprint $table) {
-            $table->INTEGER('id');
+            $table->bigIncrements('id');
             $table->INTEGER('user_id');
             $table->DATE('shift_date');
             $table->DATETIME('shift_start');
