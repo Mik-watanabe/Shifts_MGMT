@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 <style>
-#home{
+/* #home{
   display: none;
-}
+} */
 </style>
 @section('content')
 あいうえお

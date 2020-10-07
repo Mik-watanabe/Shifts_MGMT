@@ -3,7 +3,10 @@
   "Register": "新規登録",
   "E-Mail Address": "メールアドレス",
   "Password": "パスワード",
-  "Remember Me": "",
-  "": "",
+  "Remember Me": "ログイン情報を保存する",
+  "Name": "名前",
+  "Confirm Password": "確認用パスワード"
+
+
 }
 
