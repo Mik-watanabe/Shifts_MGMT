@@ -14,7 +14,7 @@ class ShiftController extends Controller
    {
         $shifts = Shift::all();
         $newArr = [];
-        $user = Auth::user();
+        
        
         foreach($shifts as $shift){
            
