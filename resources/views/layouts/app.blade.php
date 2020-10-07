@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/stylecommon.css">
     <style>
-    #app{
+    .navbar-brand{
         font-family: 'Fugaz One', cursive;
     }
     </style>
@@ -71,7 +71,7 @@
                                         {{ __('Logout') }}
                                     </a>
                                 @if(Auth::user()->is_manager)
-                                    <a id="home" class="dropdown-item" href="admin/home">ホーム画面へ</a>
+                                    <a id="home" class="dropdown-item" href="/admin/home">ホーム画面へ</a>
                                 @endif
  
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
