@@ -17,12 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: true,
     firstDay : 1,
 
-    events: [
-            {
-                title: 'イベント',
-                start: '2020-10-01'
-            }
-        ],
+    events: "/setEvents";
+   
       
         eventDrop: function(info){
         //eventをドラッグしたときの処理
