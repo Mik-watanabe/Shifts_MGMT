@@ -34,4 +34,4 @@ Route::get('/home', 'HomeController@index')->name('home');
         });
 });
 
-Route::get('/api/shifts', 'ShiftController@index');
+Route::get('/api/shifts', 'Api\ShiftController@index');
