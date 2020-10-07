@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 namespace App\Http\Controllers;
 
@@ -31,4 +31,4 @@ class ShiftController extends Controller
     public function formatDate($date){
         return str_replace('T00:00:00+09:00', '', $date);
     }
-}
+} -->

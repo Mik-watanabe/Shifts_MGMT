@@ -9,7 +9,6 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  $.get('http://127.0.0.1:8001/home')
   var calendarEl = document.getElementById('calendar');
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
@@ -17,12 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: true,
     firstDay : 1,
 
-    events: [
-            {
-                title: 'イベント',
-                start: '2020-10-01'
-            }
-        ],
+    events: "/api/shifts",
       
         eventDrop: function(info){
         //eventをドラッグしたときの処理
