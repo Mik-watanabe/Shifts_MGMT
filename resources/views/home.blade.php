@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header"><i class="far fa-envelope">登録完了</i></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,11 +13,16 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <i class="fas fa-check">登録完了</i><br>
 
-                    You are logged in!
+                   {{ $user->name }}さんの会員登録が完了いたしました。<br>
+                    ご登録いただいたメールアドレス（{{ $user->email }}）宛に、
+                    お送りしましたURLからログインページにアクセスできます。
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
