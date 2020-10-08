@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initialView: 'dayGridMonth',
     selectable: true,
     editable: true,
-    firstDay : 1,
+    firstDay: 1,
+    displayEventEnd: true,
 
     events: "/api/shifts",
       
@@ -26,8 +27,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
         dateClick: function(info) {
         //日付をクリックしたときの処理
-            //addEvent(calendar,info);
-            //あとで使う関数
+            addEvent(calendar,info){
+              
+              var startTime = '2020-10-19 07:00:00';
+              var endTime = '2020-10-19 13:00:00';
+              // $id = Auth::id();
+
+              $.ajax({
+                url: '/api/addEvent',
+                type: 'POST',
+                datatape: 'json',
+                data:{
+                  "date":info.allDay,
+                  "start":startTime,
+                  "end":endTime
+                }
+              }).done(funtion(result){
+                  calendar.addEvent({
+                    id:result['event_id'],
+                     date:info.allDay,
+                     start:startTime,
+                     end:endTime,
+                  }); 
+              });
+            }
+            
         },
 
     // dateClick: function(info){

@@ -9,16 +9,17 @@ use App\Models\Shift;
 
 class ShiftController extends Controller
 {
-    //
+    //データをデータベースから取得している
     public function index(Request $request) 
    {
         $shifts = Shift::all();
+        $user = Auth::user();
         $newArr = [];
         
        
         foreach($shifts as $shift){
            
-           if(Auth::user()->id === $shift["user_id"]){
+           if($user->id === $shift["user_id"]){
            $newItem["date"] = $shift["shift_date"];
            $newItem["start"] = $shift["shift_start"];
            $newItem["end"] = $shift["shift_end"];
@@ -29,23 +30,17 @@ class ShiftController extends Controller
         }
         return response()->json($newArr); 
     }
-        // dd($newArr)
+    // データをデータベースへ送信
+    public function addEvent(Request $request)
+    {
+        $data = $request->all();
+        $event = new Shift();
+        $event->user_id = Auth::id();
+        $event->shift_date = $data['date'];
+        $event->shift_start = $data['start'];
+        $event->shift_end = $data['end'];
+        $event->save();
 
-
-        // $shifts = create::get([
-        //     "user_id" => Auth::user()->id,
-        //     "shift_date" => $request->date,
-        //     "shift_start" => $request->start,
-        //     "shift_end" => $request->end
-
-        // ]);
-        // return response()->json($newArr); 
+        return response()->json($event);
+    }
 }
-
-
-// foreach($events as $item){
-//     $newItem["id"] = $item["event_id"];
-//     $newItem["title"] = $item["title"];
-//     $newItem["start"] = $item["date"];
-//     $newArr[] = $newItem;
-// }

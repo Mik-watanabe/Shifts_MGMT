@@ -35,3 +35,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 });
 
 Route::get('/api/shifts', 'Api\ShiftController@index');
+Route::post('/api/addEvent', 'Api\ShiftController@addEvent');
