@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     events: "/api/shifts",
       
-        eventDrop: function(info){
-        //eventをドラッグしたときの処理
-             //editEventDate(info);
-            //あとで使う関数
-        },
+        // eventDrop: function(info){
+        // //eventをドラッグしたときの処理
+        //      //editEventDate(info);
+        //     //あとで使う関数
+        // },
 
         dateClick: function(info) {
         //日付をクリックしたときの処理
@@ -31,12 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
               
               var startTime = '2020-10-19 07:00:00';
               var endTime = '2020-10-19 13:00:00';
-              // $id = Auth::id();
 
               $.ajax({
-                url: '/api/addEvent',
-                type: 'POST',
-                datatape: 'json',
+                url: "/api/addEvent",
+                type: "POST",
+                dataType: "json",
                 data:{
                   "date":info.allDay,
                   "start":startTime,
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
               }).done(funtion(result){
                   calendar.addEvent({
-                    id:result['event_id'],
+                     id:result['user_id'],
                      date:info.allDay,
                      start:startTime,
                      end:endTime,
