@@ -16,7 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: true,
     firstDay : 1,
 
+
     events: "/api/shifts",
+
+   
+
       
         eventDrop: function(info){
         //eventをドラッグしたときの処理

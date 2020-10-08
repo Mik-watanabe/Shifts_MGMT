@@ -9,25 +9,23 @@ use App\Models\Shift;
 
 class ShiftController extends Controller
 {
-    //
     public function index(Request $request) 
    {
         $shifts = Shift::all();
+        $user = Auth::user();
         $newArr = [];
         
        
-        foreach($shifts as $shift){
-           
-           if(Auth::user()->id === $shift["user_id"]){
+       if($user->id === $shift["user_id"]){
            $newItem["date"] = $shift["shift_date"];
            $newItem["start"] = $shift["shift_start"];
            $newItem["end"] = $shift["shift_end"];
            $newArr[] = $newItem;
 
             }
-           
         }
         return response()->json($newArr); 
+
     }
         // dd($newArr)
 
