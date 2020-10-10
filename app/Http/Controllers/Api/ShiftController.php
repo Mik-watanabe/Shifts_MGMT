@@ -13,17 +13,23 @@ class ShiftController extends Controller
     public function index(Request $request) 
    {
         $shifts = Shift::all();
-        $user = Auth::user();
+        $user = Auth::id();
         $newArr = [];
         
        
         foreach($shifts as $shift){
            
-           if($user->id === $shift["user_id"]){
-           $newItem["date"] = $shift["shift_date"];
-           $newItem["start"] = $shift["shift_start"];
-           $newItem["end"] = $shift["shift_end"];
-           $newArr[] = $newItem;
+           if($user === $shift["user_id"]){
+
+                $newItem = [
+                    'date' => $shift['shift_date'],
+                    'start' => $shift['shift_start'],
+                    'end' => $shift['shift_end'],
+                ];
+        //    $newItem["date"] = $shift["shift_date"];
+        //    $newItem["start"] = $shift["shift_start"];
+        //    $newItem["end"] = $shift["shift_end"];
+                $newArr[] = $newItem;
 
             }
            
@@ -41,6 +47,6 @@ class ShiftController extends Controller
         $event->shift_end = $data['end'];
         $event->save();
 
-        return response()->json(['user_id' => $event->user_id]);
+        return response()->json(['event_id' => $event->user_id]);
     }
 }
