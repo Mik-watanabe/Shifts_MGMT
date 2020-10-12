@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dateClick: function(info) {
     //日付をクリックしたときの処理
+    
       addEvent(calendar,info);
     },
 
@@ -48,54 +49,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function addEvent(calendar,info) {
         
-          var startTime = '2020-10-21 09:00:00';
-          var endTime = '2020-10-21 13:00:00';
+          var startTime = prompt("開始時刻:");
+          var endTime = prompt("終了時刻:");
           
           $.ajax({
             url: '/api/addEvent',
             type: 'POST',
             dataType: 'json',
             data: {
-              'date': '2020-10-21',
+              'date': info.dateStr,
               'start': startTime,
               'end': endTime,
             },
           }).done(function(result){
-            if(result[user_id] === {{Auth::id() }}){
+            if(result['user_id'] === {{ Auth::id() }}){
             calendar.addEvent({
+              date: info.dateStr,
               start: startTime,
               end: endTime,
              });
             }
-          })
-          // .done(function(result) { 
-          //   addEvent({
-
-          //   });
-
-          //   })
-      
-  
-        //   $.ajax({
-        //     url: "/api/addEvent",
-        //     type: "POST",
-        //     dataType: "json",
-        //     data:{
-        //       "date":info.allDay,
-        //       "start":startTime,
-        //       "end":endTime
-        //     }
-        //   }).done(funtion(result) {
-        //     calendar.addEvent({
-        //       id:result['user_id'],
-        //       date:info.allDay,
-        //       start:startTime,
-        //       end:endTime,
-        //     }); 
-        //   });
-        // } 
+          });
 }
-
 </script>
 
 <div id='calendar'></div>

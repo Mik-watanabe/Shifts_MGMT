@@ -47,6 +47,6 @@ class ShiftController extends Controller
         $event->shift_end = $data['end'];
         $event->save();
 
-        return response()->json(['event_id' => $event->user_id]);
+        return response()->json(['user_id' => $event->user_id]);
     }
 }
