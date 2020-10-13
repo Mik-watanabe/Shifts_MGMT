@@ -15,16 +15,17 @@ class ShiftController extends Controller
         $shifts = Shift::all();
         $user = Auth::id();
         $newArr = [];
-        
        
         foreach($shifts as $shift){
            
            if($user === $shift["user_id"]){
 
+            $date = $shift['shift_date'];
+
                 $newItem = [
-                    'date' => $shift['shift_date'],
-                    'start' => $shift['shift_start'],
-                    'end' => $shift['shift_end'],
+                    'date' => $date,
+                    'start' => $date.' '.$shift['shift_start'],
+                    'end' => $date.' '.$shift['shift_end'],
                 ];
         //    $newItem["date"] = $shift["shift_date"];
         //    $newItem["start"] = $shift["shift_start"];
