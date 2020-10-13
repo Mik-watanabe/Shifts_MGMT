@@ -17,8 +17,8 @@ class CreateShiftsTable extends Migration
             $table->bigIncrements('id');
             $table->INTEGER('user_id');
             $table->DATE('shift_date');
-            $table->DATETIME('shift_start');
-            $table->DATETIME('shift_end');
+            $table->TIME('shift_start');
+            $table->TIME('shift_end');
             $table->timestamps();
         });
     }
