@@ -17,7 +17,8 @@ class ShiftController extends Controller
 
         $newArr = [];
        
-        foreach($shifts as $shift){           
+        foreach($shifts as $shift){
+            
             $date = $shift->shift_date;
             $newItem = [
                 'date' => $date,
