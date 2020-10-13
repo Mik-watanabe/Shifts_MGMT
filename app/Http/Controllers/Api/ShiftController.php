@@ -12,31 +12,24 @@ class ShiftController extends Controller
     //データをデータベースから取得している
     public function index(Request $request) 
    {
-        $shifts = Shift::all();
-        $user = Auth::id();
+       $id = Auth::id();
+       $shifts = Shift::where('user_id', $id)->get();
+
         $newArr = [];
        
-        foreach($shifts as $shift){
-           
-           if($user === $shift["user_id"]){
-
-            $date = $shift['shift_date'];
-
-                $newItem = [
-                    'date' => $date,
-                    'start' => $date.' '.$shift['shift_start'],
-                    'end' => $date.' '.$shift['shift_end'],
-                ];
-        //    $newItem["date"] = $shift["shift_date"];
-        //    $newItem["start"] = $shift["shift_start"];
-        //    $newItem["end"] = $shift["shift_end"];
-                $newArr[] = $newItem;
-
-            }
-           
+        foreach($shifts as $shift){           
+            $date = $shift->shift_date;
+            $newItem = [
+                'date' => $date,
+                'start' => $date.' '.$shift->shift_start,
+                'end' => $date.' '.$shift->shift_end,
+            ];
+            $newArr[] = $newItem;
         }
+           
         return response()->json($newArr); 
     }
+
     // データをデータベースへ送信
     public function addEvent(Request $request)
     {

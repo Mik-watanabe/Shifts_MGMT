@@ -32,7 +32,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::group(['middleware' => ['loginUserCheck:user']], function() {
         Route::get('/user/home', 'UserController@index')->name('users.index');
     });
+    Route::group(['prefix' => "api", 'namespace' => 'Api'], function() {
+        Route::get('/shifts', 'ShiftController@index');
+        Route::post('/addEvent', 'ShiftController@addEvent');
+    });
+
 });
 
-Route::get('/api/shifts', 'Api\ShiftController@index');
-Route::post('/api/addEvent', 'Api\ShiftController@addEvent');
