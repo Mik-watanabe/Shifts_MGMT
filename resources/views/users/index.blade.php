@@ -53,13 +53,12 @@ function addEvent(calendar,info) {
               'end': endTime,
             },
           }).done(function(result){
-            if(result['user_id'] === {{ Auth::id() }}){
-            calendar.addEvent({
+            console.log(info.dateStr);
+              calendar.addEvent({
               date: info.dateStr,
-              start: startTime,
-              end: endTime,
-             });
-            }
+              start: info.dateStr+" "+startTime,
+              end: info.dateStr+" "+endTime,
+             });         
           });
 }
 
