@@ -40,7 +40,7 @@ class UserCreateController extends Controller
         if (!$request->hasValidSignature()) {
             return redirect()->route('invalid');
         }
-        return view('/resister');
+        return view('auth/register');
     }
 
     public function invalid()
