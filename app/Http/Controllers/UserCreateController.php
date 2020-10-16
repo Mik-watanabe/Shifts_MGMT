@@ -30,7 +30,8 @@ class UserCreateController extends Controller
 
         $mail = new createUserMail($request, $urls, $manager);
         Mail::to($request->email)->send($mail);
-        return 'sent';
+        return view('/home');
+        
     }
 
     public function resister(Request $request)

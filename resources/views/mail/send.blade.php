@@ -1,4 +1,4 @@
 {{ $text }}
 <br>
-reply: {{ $urls['createUser'] }}
+ {{ $urls['createUser'] }}
 <br>
