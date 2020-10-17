@@ -42,7 +42,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary" style="background-color:#77bfa3; border:none;">
+                                <button class="btn btn-primary" type="submit" >
                                     新規追加
                                 </button>
                             </div>
@@ -54,4 +54,4 @@
     </div>
 </div>
 @endsection
-<!-- あとで新規追加にhover追加して、opacityかなんかで変化つける -->
+

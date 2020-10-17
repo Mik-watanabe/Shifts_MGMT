@@ -21,7 +21,7 @@ class UserCreateController extends Controller
     {
         $urls = [
                 "createUser" => URL::temporarySignedRoute(
-                   'user.resister',
+                   'user.register',
                    now()->addMinutes(30),
                    ['from' => Auth::user()->name]
                 ),
@@ -34,7 +34,7 @@ class UserCreateController extends Controller
         
     }
 
-    public function resister(Request $request)
+    public function register(Request $request)
     {
         // リンクの検証
         if (!$request->hasValidSignature()) {

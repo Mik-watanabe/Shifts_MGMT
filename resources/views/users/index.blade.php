@@ -42,7 +42,6 @@ function addEvent(calendar,info) {
       'end': endTime,
     },
   }).done(function(result){
-    console.log(info.dateStr);
       calendar.addEvent({
         date: info.dateStr,
         start: info.dateStr+" "+startTime,

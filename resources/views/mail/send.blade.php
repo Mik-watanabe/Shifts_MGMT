@@ -1,3 +1,4 @@
+
 {{ $text }}
 <br>
  {{ $urls['createUser'] }}

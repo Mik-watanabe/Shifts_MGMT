@@ -38,8 +38,7 @@ Route::group(['middleware' => ['auth']], function() {
     });
 
     Route::get('/user/create', 'UserCreateController@createUser');
-    Route::post('/send', 'UserCreateController@send')->name('user.create');
-    Route::get('/user/resister', 'UserCreateController@resister')->name('user.resister');
+    Route::post('/send', 'UserCreateController@send')->name('user.create'); 
     Route::get('/invalid', 'UserCreateController@invalid')->name('invalid');
 });
-
+Route::get('/user/register', 'UserCreateController@register')->name('user.register');
