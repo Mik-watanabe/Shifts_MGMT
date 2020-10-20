@@ -42,3 +42,4 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/invalid', 'UserCreateController@invalid')->name('invalid');
 });
 Route::get('/user/register', 'UserCreateController@register')->name('user.register');
+Route::get('remind/mail', 'ShiftController@remind')->name('remind.mail');

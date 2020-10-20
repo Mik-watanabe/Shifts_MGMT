@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\URL;
 use App\User;
 
 class Reminder extends Command
@@ -40,19 +41,23 @@ class Reminder extends Command
      */
     public function handle()
     {
+        
         //
-        $dt = new Carbon();
+        // $dt = new Carbon();
        
-        if($dt->day === 14){
+        // if($dt->day === 14){
 
-            $users = User::where('manager_id', 0)->get();
+            $users = User::where('is_manager', 0)->get();
+
+            
 
             foreach($users as $user) {
-                // $userの中にメールアドレスが含まれている
+
             Mail::send('mail/remindMail', [
-                "message" => "シフトの提出期限は明日の23:59までです。
-            シフト未提出の方は以下のURLからアクセスし、来月のシフトを提出してください。"
-            ], function($message) {
+                "comment" => "シフトの提出期限は明日の23:59までです。
+            シフト未提出の方は以下のURLからアクセスし、来月のシフトの提出をお願いします。", 
+            
+            ],function($message)use($user) {
                 
                 $message
                     ->to($user->email)
@@ -61,10 +66,6 @@ class Reminder extends Command
             });
 
             }
-        }
-        
-
-       
-    
-    }
+            }   
+   
 }

@@ -17,7 +17,7 @@ class ShiftController extends Controller
 
         $newArr = [];
        
-        foreach($shifts as $shift){
+        foreach($shifts as $shift) {
             
             $date = $shift->shift_date;
             $newItem = [
@@ -43,5 +43,10 @@ class ShiftController extends Controller
         $event->save();
 
         return response()->json(['user_id' => $event->user_id]);
+    }
+
+    public function remind()
+    {
+        return view('/login');
     }
 }
