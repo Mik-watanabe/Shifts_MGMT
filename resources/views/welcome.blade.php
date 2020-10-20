@@ -32,7 +32,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a class="button login-btn" href="{{ route('login') }}">　Login　</a>
+                        <a class="button login-btn" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
                             <a class="button resister-btn" href="{{ route('register') }}">Resister</a>

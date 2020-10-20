@@ -23,6 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/stylecommon.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <style>
     .navbar-brand{
         font-family: 'Fugaz One', cursive;
@@ -72,6 +73,7 @@
                                     </a>
                                 @if(Auth::user()->is_manager)
                                     <a id="home" class="dropdown-item" href="/admin/home">ホーム画面へ</a>
+                                    <a id="home" class="dropdown-item" href="/user/create">スタッフの追加</a>
                                 @endif
  
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

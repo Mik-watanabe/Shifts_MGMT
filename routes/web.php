@@ -24,7 +24,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/shifts', 'ShiftController@setEvents');
 
     Route::group(['middleware' => ['loginUserCheck:manager']], function() {
-       Route::get('/admin/home', 'ManagerController@index')->name('manager.index');
+       Route::get('/admin/home', 'Api\ManagerController@index')->name('manager.index');
        Route::get('/home', 'HomeController@index');
     });
 
@@ -33,10 +33,12 @@ Route::group(['middleware' => ['auth']], function() {
     });
     Route::group(['prefix' => "api", 'namespace' => 'Api'], function() {
         Route::get('/shifts', 'ShiftController@index');
-        Route::post('/addEvent', 'ShiftController@addEvent');   
+        Route::post('/addEvent', 'ShiftController@addEvent');
+        Route::get('/manager', 'ManagerController@showShifts');   
     });
 
-    Route::get('/api/manager', 'ManagerController@showShifts');
-
+    Route::get('/user/create', 'UserCreateController@createUser');
+    Route::post('/send', 'UserCreateController@send')->name('user.create'); 
+    Route::get('/invalid', 'UserCreateController@invalid')->name('invalid');
 });
-
+Route::get('/user/register', 'UserCreateController@register')->name('user.register');

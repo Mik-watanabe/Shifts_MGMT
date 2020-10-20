@@ -1,15 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Shift;
 use App\User;
 
 class ManagerController extends Controller
 {
-    //
+    
     public function index()
     {
 
@@ -36,3 +39,5 @@ class ManagerController extends Controller
        return response()->json($showShifts);
     }
 }
+
+

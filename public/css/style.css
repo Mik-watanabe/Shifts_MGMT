@@ -1,73 +1,68 @@
 html, body {
-  background-color:#edeec9;
+  background-color:whitesmoke;
   color: #77bfa3;
-  font-family: 'Fugaz One', cursive;
+ 
 } 
 .button{
-  padding: 0.8em 2.2em;
-  background-color: #bfd8bd;
-  border-radius: 3em;
-  border: dotted;
-  border-color: #ffd97d;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  padding: 0.4em 1.5em;
   text-decoration: none;
-  color: #50514f;
-  box-shadow: 0 0 8px gray;
+  color: rgba(0, 0, 0, 0.709);
+  border: solid 2px #e3bf00;
+  border-radius: 3px;
+  transition: .4s;
+  font-weight: bold;
+  font-size: small;
+  width: 40%;
+  margin-top: 20px;
+  letter-spacing: 0.08cm;
 }
-.button:hover{
-  opacity: 0.8;
+.button:hover {
+  background:  #e3bf00;
+  color: white;
 }
+
 .content {
   display: block;
   text-align: center;
 }
 .title{
-  margin-bottom: 0.7em;
-  text-shadow: 2px 2px 4px gray;
-}
-
-
-.resister-btn{
-  margin-left: 0.9em;
-}
-/* 
-a{
-  text-shadow:2px 2px 4px ;
-} */
-
-@media screen and (min-width:480px) { 
-  .title {
-  font-size: 4em;
+  margin-bottom: 5vh;
+  text-shadow: 2px 2px 2px gray;
+  font-family: 'Fugaz One', cursive;
+  font-size: 60px;
   line-height: 1.0em;
-  margin-top: 200px;
-       
-}
-.resister-btn{
-  margin-left: 2em;
-}
+  margin-top: 20vh;    
+} 
 
-
- 
-
-@media screen and (min-width:768px) and ( max-width:1024px) {
+@media screen and (min-width:481px) { 
+  
   .title {
-    font-size: 5em;
-    line-height: 1.0em;
-    margin-top: 200px;      
+    font-size: 90px;    
   }
-  .button  {
-    padding: 0.8em 3em;
+
+  .button{
+    font-weight: bold;
+    padding: 0.6em 1.5em;
+    font-size: medium;
+    margin-top: 35px;
   }
 
 }
 
-@media screen and (min-width:1024px) {
+
+@media screen and (min-width:960px) {
   .title {
-    font-size: 7em;
-    line-height: 1.0em;
-    margin-top: 200px;      
+    font-size: 120px; 
   }
   .button {
-    padding: 0.8em 4em;
+   display: inline-block;
+   width: 20%;
+   padding: 15px 0 ;
+   font-weight: bold;
+   font-size: large;
   }
   .resister-btn {
     margin-left: 2.5em;

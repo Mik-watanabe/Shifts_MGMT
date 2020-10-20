@@ -3,7 +3,7 @@
   text-shadow: 1px 1px 1px gray;
 }
 .navbar-light  .navbar-brand:hover {
-  color: #d3a829b6;
+  color: #e3bf00;
   text-shadow: 1px 1px 2px rgba(136, 128, 128, 0);
 }
 
@@ -12,7 +12,8 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-  color: #d3a829b6
+  color: #e3bf00;
+  font-weight: bold;
 }
 
 .navbar-laravel{
@@ -23,6 +24,36 @@ body{
 }
 
 div .card{
-  border: dotted;
-  border-color: #ffd97d;
+  border: dashed;
+  border-color:#e3bf00;
+}
+
+.btn-primary{
+  color: rgba(0, 0, 0, 0.709);
+  border: solid 2px #77bfa3;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  border: solid 2px #77bfa3;
+  background-color: #77bfa3;
+}
+
+.image{
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+@media screen and (max-width: 480px) {
+  .image{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }

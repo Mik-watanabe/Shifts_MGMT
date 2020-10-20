@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><i class="far fa-envelope">登録完了</i></div>
+                <div class="card-header"> <i class="fas fa-check" style="color:#77bfa3;"></i>&nbsp;送信完了</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,11 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <i class="fas fa-check">登録完了</i><br>
-
-                   {{ $user->name }}さんの会員登録が完了いたしました。<br>
-                    ご登録いただいたメールアドレス（{{ $user->email }}）宛に、
-                    お送りしましたURLからログインページにアクセスできます。
+                    <img class="image" src="{{ asset('img/undraw_Delivery_re_f50b.png') }}" alt="invite-img">
+                    <P style="text-align: center;">新スタッフへ招待メールの送信が完了しました。</P>
 
                 </div>
             </div>
