@@ -45,8 +45,4 @@ class ShiftController extends Controller
         return response()->json(['user_id' => $event->user_id]);
     }
 
-    public function remind()
-    {
-        return view('/login');
-    }
 }

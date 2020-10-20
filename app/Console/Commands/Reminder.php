@@ -43,29 +43,21 @@ class Reminder extends Command
     {
         
         //
-        // $dt = new Carbon();
-       
-        // if($dt->day === 14){
-
-            $users = User::where('is_manager', 0)->get();
-
-            
-
+        $users = User::where('is_manager', 0)->get();
+        
             foreach($users as $user) {
 
-            Mail::send('mail/remindMail', [
-                "comment" => "シフトの提出期限は明日の23:59までです。
-            シフト未提出の方は以下のURLからアクセスし、来月のシフトの提出をお願いします。", 
-            
-            ],function($message)use($user) {
-                
-                $message
-                    ->to($user->email)
-                    ->bcc('admin@sample.com')
-                    ->subject("シフトの提出をお願いします☺");
-            });
+                Mail::send('mail/remindMail',
+                [],
+                function($message)use($user) {
+                    
+                    $message
+                        ->to($user->email)
+                        ->bcc('admin@sample.com')
+                        ->subject("シフトの提出をお願いします☺");
+                });
 
             }
-            }   
+    }   
    
 }
