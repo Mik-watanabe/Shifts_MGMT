@@ -24,12 +24,13 @@ class ShiftController extends Controller
                 'date' => $date,
                 'start' => $date.' '.$shift->shift_start,
                 'end' => $date.' '.$shift->shift_end,
+                'id'  => $shift->id
             ];
             $newArr[] = $newItem;
         }
            
         return response()->json($newArr); 
-    }
+    }
 
     // データをデータベースへ送信
     public function addEvent(Request $request)
@@ -43,6 +44,15 @@ class ShiftController extends Controller
         $event->save();
 
         return response()->json(['user_id' => $event->user_id]);
+    }
+
+    public function deleteShift(Request $request)
+    {
+        $id = $request->id;
+
+        $deleteshift = Shift::where('id', $id)->delete();
+
+        return response()->json($deleteshift);
     }
 
 }
