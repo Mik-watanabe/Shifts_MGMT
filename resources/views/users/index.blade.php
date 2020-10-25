@@ -25,30 +25,33 @@ document.addEventListener('DOMContentLoaded', function() {
       addEvent(calendar,info);
     },
     // 入力済みの予定をクリックすると、編集or削除できる処理
-    eventClick: function(info)  {
-      deleteEvent(info);
+    eventClick: function(info) {
 
+      deleteEvent(calendar,info);
     }
   });
   calendar.render();
 });
 
-function deleteEvent(info,calendar) {
-
+function deleteEvent(calendar,info) {
+  
   var deleteShift = confirm('シフトを取り消しますか？');
 
-  if(deleteShift) {
-    $.ajax({
-      url: '/api/deleteShift',
-      type: 'POST',
-      dataType:"json",
-      data:{'id':info.event.id,
-      },
-    }).done(function(result){
-      
-      calendar.fullCalendar("removeEvents", info.event.id);
-    });
-  }
+      if(deleteShift) {
+        $.ajax({
+          url: '/api/deleteShift',
+          type: 'POST',
+          dataType:"json",
+          data:{'id':info.event.id,
+          },
+        }).done(function(result){
+
+          var event = calendar.getEventById(info.event.id);
+
+          event.remove();
+
+        });
+      }
  
 }
 
