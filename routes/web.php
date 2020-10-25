@@ -43,3 +43,5 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Route::get('/user/register', 'UserCreateController@register')->name('user.register');
+
+Route::post('/api/deleteShift', 'Api\ShiftController@deleteShift');
