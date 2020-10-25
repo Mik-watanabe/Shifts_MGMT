@@ -13,9 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img class="image" src="{{ asset('img/undraw_confirmed_81ex.png') }}" alt="invite-img">
-                    <P style="text-align: center;">ありがとうございます。<br>
-                    登録が完了しました。これから一緒にがんばっていきましょう☺️</P>
+                    <img class="image" src="{{ asset('img/undraw_confirmed_81ex.png') }}" alt="confirmed-img">
+                    <P style="text-align: center;">
+                    登録が完了しました。<br>これから一緒にがんばっていきましょう☺️</P>
 
                 </div>
             </div>
