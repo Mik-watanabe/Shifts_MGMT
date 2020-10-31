@@ -44,3 +44,6 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Route::get('/user/register', 'UserCreateController@register')->name('user.register');
+
+Route::get('/api/changeColor', 'Api\ManagerController@changeColor');
+Route::post('/api/color', 'Api\ManagerController@color')->name('color');
