@@ -37,21 +37,18 @@ function deleteEvent(calendar,info) {
   
   var deleteShift = confirm('シフトを取り消しますか？');
 
-      if(deleteShift) {
-        $.ajax({
-          url: '/api/deleteShift',
-          type: 'POST',
-          dataType:"json",
-          data:{'id':info.event.id,
-          },
-        }).done(function(result){
-
-          var event = calendar.getEventById(info.event.id);
-
-          event.remove();
-
-        });
-      }
+  if(deleteShift) {
+    $.ajax({
+      url: '/api/deleteShift',
+      type: 'POST',
+      dataType:'json',
+      data:{'id':info.event.id,
+      },
+    }).done(function(result){
+      var event = calendar.getEventById(info.event.id)
+      event.remove()
+    });
+  }
  
 }
 
