@@ -1,12 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- <style>
-label{
-    display:block;
-    text-align:center;
-}
-</style> -->
 
 <link rel="stylesheet" href="/css/stylecommon.css">
 <div class="container">
@@ -31,11 +25,6 @@ label{
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-
-                        <div class="form-check">
-                        <input name="is_manager" class="form-check-input" type="checkbox" id="checkmanager" checked>
-                        <label class="form-check-label" for="checkmanager" >＊マネージャーはチェックを入れてください。</label>
                         </div>
 
                         <div class="form-group row">
@@ -74,13 +63,19 @@ label{
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-check col-md-7 offset-md-4">
+                            <input name="is_manager" class="form-check-input" type="checkbox" id="checkmanager" checked>
+                            <label class="form-check-label" for="checkmanager" >マネージャーはチェックを入れてください。</label>
+                        </div>
+
+                        <div class="form-group row mb-0 mt-3">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>

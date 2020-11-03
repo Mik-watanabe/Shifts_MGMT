@@ -24,7 +24,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/shifts', 'ShiftController@setEvents');
 
     Route::group(['middleware' => ['loginUserCheck:manager']], function() {
-       Route::get('/admin/home', 'Api\ManagerController@index')->name('manager.index');
+       Route::get('/admin/home', 'ManagerController@index')->name('manager.index');
        Route::get('/home', 'HomeController@index');
     });
 
@@ -35,7 +35,7 @@ Route::group(['middleware' => ['auth']], function() {
         Route::get('/shifts', 'ShiftController@index');
         Route::post('/addEvent', 'ShiftController@addEvent');
         Route::get('/manager', 'ManagerController@showShifts'); 
-        Route::post('/deleteShift','ShiftController@deleteShift');  
+        Route::post('/deleteShift', 'ShiftController@deleteShift');  
     });
 
     Route::get('/user/create', 'UserCreateController@createUser');
@@ -45,5 +45,5 @@ Route::group(['middleware' => ['auth']], function() {
 
 Route::get('/user/register', 'UserCreateController@register')->name('user.register');
 
-Route::get('/api/changeColor', 'Api\ManagerController@changeColor');
-Route::post('/api/color', 'Api\ManagerController@color')->name('color');
+Route::get('/admin/user-color', 'ManagerController@showUserColor');
+Route::post('/admin/user-color', 'ManagerController@updateUserColor')->name('admin.user-color.update');

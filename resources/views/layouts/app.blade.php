@@ -25,8 +25,13 @@
     <link rel="stylesheet" href="/css/stylecommon.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <style>
-    .navbar-brand{
+    .navbar-brand {
         font-family: 'Fugaz One', cursive;
+    }
+    
+    i {
+       font-size:1.5em;
+       color:#77bfa3;
     }
     </style>
 </head>
@@ -69,11 +74,13 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        <i class='bx bx-exit'></i>
+                                        &nbsp;{{ __('Logout') }}
                                     </a>
                                 @if(Auth::user()->is_manager)
-                                    <a id="home" class="dropdown-item" href="/admin/home">ホーム画面へ</a>
-                                    <a id="home" class="dropdown-item" href="/user/create">スタッフの追加</a>
+                                    <a id="home" class="dropdown-item" href="/admin/home"><i class='bx bx-home-smile'></i>&nbsp;ホーム画面へ</a>
+                                    <a id="home" class="dropdown-item" href="/user/create"><i class='bx bx-user-pin'></i>&nbsp;スタッフの追加</a>
+                                    <a id="home" class="dropdown-item" href="/admin/user-color"><i class='bx bxs-color-fill'></i>&nbsp;スタッフのカラー変更</a>
                                 @endif
  
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

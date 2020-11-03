@@ -12,13 +12,7 @@ use App\User;
 
 class ManagerController extends Controller
 {
-    
-    public function index()
-    {
-
-       return view('manager/index');
-    }
-
+  
     public function showShifts(Request $request)
     {
      $shifts = Shift::all();
@@ -39,19 +33,6 @@ class ManagerController extends Controller
        return response()->json($showShifts);
     }
 
-    public function changeColor() 
-    {
-      //マネージャー以外のユーザーを獲得
-      $users = User::where('is_manager', 0)->get();
-
-      return view('manager/changeColor',['users' => $users]);
-    }
-
-    public function color(Request $request)
-    {
-     
-    }
-    
 }
 
 
