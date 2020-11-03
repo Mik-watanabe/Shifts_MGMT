@@ -46,4 +46,4 @@ Route::group(['middleware' => ['auth']], function() {
 Route::get('/user/register', 'UserCreateController@register')->name('user.register');
 
 Route::get('/admin/user-color', 'ManagerController@showUserColor');
-Route::post('/admin/user-color', 'ManagerController@updateUserColor')->name('admin.user-color.update');
+Route::post('/admin/user-color/{id}', 'ManagerController@updateUserColor')->name('admin.user-color.update');

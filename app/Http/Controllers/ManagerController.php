@@ -24,7 +24,13 @@ class ManagerController extends Controller
 
     public function updateUserColor(Request $request)
     {
-     
+     $color = $request->favorite_color;
+     $id = $request->id;
+
+     User::where('id', $id)->update(['color'=>$color]);
+    
+     return redirect()->back();
+
     }
     
 }
