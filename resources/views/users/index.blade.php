@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: true,
     firstDay: 1,
     displayEventEnd: true,
+    eventTimeFormat: { // like '14:30:00'
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+    },
 
     events: "/api/shifts",
 

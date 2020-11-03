@@ -15,7 +15,6 @@ class ShiftController extends Controller
        $user = Auth::user();
        $id = $user->id;
        $shifts = Shift::where('user_id', $id)->get();
-       $color = $user->color;
 
         $newArr = [];
        
@@ -28,7 +27,6 @@ class ShiftController extends Controller
                 'start' => $date.' '.$shift->shift_start,
                 'end' => $date.' '.$shift->shift_end,
                 'id'  => $shift->id,
-                'backgroundColor' => $color,
             ];
             $newArr[] = $newItem;
         }
