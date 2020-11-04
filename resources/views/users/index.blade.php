@@ -5,7 +5,6 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.css">
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.js"></script>
-<!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -21,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     hour: '2-digit',
     minute: '2-digit',
     hour12: false
+    },
+    headerToolbar: {
+    start: 'dayGridMonth,listMonth', // will normally be on the left. if RTL, will be on the right
+    center: 'title',
+    end: 'today,prev,next' // will normally be on the right. if RTL, will be on the left
     },
 
     events: "/api/shifts",

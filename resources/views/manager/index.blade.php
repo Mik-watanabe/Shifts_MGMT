@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     start: 'dayGridMonth,listMonth', // will normally be on the left. if RTL, will be on the right
     center: 'title',
     end: 'today,prev,next' // will normally be on the right. if RTL, will be on the left
-  },
+    },
     eventTimeFormat: { // like '14:30:00'
     hour: '2-digit',
     minute: '2-digit',
@@ -38,3 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div id='calendar'></div>
 @endsection
+
+<style>
+ #calendar {
+   max-width: 1140px;
+   margin: 0 auto;
+   
+ }
+ </style>
