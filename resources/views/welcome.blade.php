@@ -11,20 +11,17 @@
 
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
-        <!-- Styles -->
-        <style>
-            
-            
-        </style>
+        
     </head>
     <body>
         
 
         <div class="content">
-                <div class="title">
+                <div class="title" style="margin-bottom: 0;">
                    Worktime
                    <br>Scheduler
                 </div>
+                <h1 style="margin-top: 0;">ー&nbsp;シフト管理システム&nbsp;ー</h1>
 
                 <div class="btn">
             @if (Route::has('login'))

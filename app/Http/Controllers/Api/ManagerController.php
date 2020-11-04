@@ -12,13 +12,7 @@ use App\User;
 
 class ManagerController extends Controller
 {
-    
-    public function index()
-    {
-
-       return view('manager/index');
-    }
-
+  
     public function showShifts(Request $request)
     {
      $shifts = Shift::all();
@@ -31,13 +25,16 @@ class ManagerController extends Controller
             'title' => $shift->user->name,
             'date' => $date,
             'start' => $date.' '.$shift->shift_start,
-            'end' => $date.' '.$shift->shift_end,
+            'end' => $date.' '.$shift->shift_end, 
+            'backgroundColor' => $shift->user->color,    
         ];
+
         $showShifts[] = $newItem;
       }
 
        return response()->json($showShifts);
     }
+
 }
 
 

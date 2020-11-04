@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,8 +42,8 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
-
+    'port' => env('MAIL_PORT', 587), 
+   
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address
@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'laugh.luv919@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'mikwatanabe.work@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 

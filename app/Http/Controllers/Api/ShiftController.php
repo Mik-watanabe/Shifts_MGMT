@@ -12,19 +12,21 @@ class ShiftController extends Controller
     //データをデータベースから取得している
     public function index(Request $request) 
    {
-       $id = Auth::id();
+       $user = Auth::user();
+       $id = $user->id;
        $shifts = Shift::where('user_id', $id)->get();
 
         $newArr = [];
        
         foreach($shifts as $shift) {
             
+            
             $date = $shift->shift_date;
             $newItem = [
                 'date' => $date,
                 'start' => $date.' '.$shift->shift_start,
                 'end' => $date.' '.$shift->shift_end,
-                'id'  => $shift->id
+                'id'  => $shift->id,
             ];
             $newArr[] = $newItem;
         }

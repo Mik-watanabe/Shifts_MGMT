@@ -21,19 +21,19 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make(12345678),
             ],
             [
-                'name' => "加藤さん",
+                'name' => "加藤太郎",
                 'email' => "Kato@mail.com",
                 'is_manager' => 0,
                 'password' => Hash::make(23456789),
             ],
             [
-                'name' => "渡邉さん",
+                'name' => "渡邉太郎",
                 'email' => "Watanabe@mail.com",
                 'is_manager' => 0,
                 'password' => Hash::make(34567890),
             ],
             [
-                'name' => "佐々木さん",
+                'name' => "佐々木太郎",
                 'email' => "Sasaki@mail.com",
                 'is_manager' => 0,
                 'password' => Hash::make(45678123),
