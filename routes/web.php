@@ -26,6 +26,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::group(['middleware' => ['loginUserCheck:manager']], function() {
        Route::get('/admin/home', 'ManagerController@index')->name('manager.index');
        Route::get('/home', 'HomeController@index');
+       Route::get('/admin/user-color', 'ManagerController@showUserColor');
+       Route::post('/admin/user-color/{id}', 'ManagerController@updateUserColor')->name('admin.user-color.update');
     });
 
     Route::group(['middleware' => ['loginUserCheck:user']], function() {
@@ -45,5 +47,3 @@ Route::group(['middleware' => ['auth']], function() {
 
 Route::get('/user/register', 'UserCreateController@register')->name('user.register');
 
-Route::get('/admin/user-color', 'ManagerController@showUserColor');
-Route::post('/admin/user-color/{id}', 'ManagerController@updateUserColor')->name('admin.user-color.update');
