@@ -34,7 +34,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::group(['prefix' => "api", 'namespace' => 'Api'], function() {
         Route::get('/shifts', 'ShiftController@index');
         Route::post('/addEvent', 'ShiftController@addEvent');
-        Route::get('/manager', 'ManagerController@showShifts');   
+        Route::get('/manager', 'ManagerController@showShifts'); 
+        Route::post('/deleteShift','ShiftController@deleteShift');  
     });
 
     Route::get('/user/create', 'UserCreateController@createUser');
@@ -43,5 +44,3 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Route::get('/user/register', 'UserCreateController@register')->name('user.register');
-
-Route::post('/api/deleteShift', 'Api\ShiftController@deleteShift');

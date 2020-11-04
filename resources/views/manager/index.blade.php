@@ -19,36 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     events: "/api/manager",
 
-    // dateClick: function(info) {
-    // //日付をクリックしたときの処理   
-    //   addEvent(calendar,info);
-    // }
   });
+
   calendar.render();
 });
-
-// function addEvent(calendar,info) {  
-//   var startTime = prompt("開始時刻:");
-//   var endTime = prompt("終了時刻:");
-  
-//   $.ajax({
-//     url: '/api/addEvent',
-//     type: 'POST',
-//     dataType: 'json',
-//     data: {
-//       'date': info.dateStr,
-//       'start': startTime,
-//       'end': endTime,
-//     },
-//   }).done(function(result){
-//     console.log(info.dateStr);
-//       calendar.addEvent({
-//         date: info.dateStr,
-//         start: info.dateStr+" "+startTime,
-//         end: info.dateStr+" "+endTime,
-//       });         
-//   });
-// }
 
 </script>
 
