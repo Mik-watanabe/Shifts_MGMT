@@ -2,6 +2,13 @@
 
 
 @section('content')
+<style>
+ #calendar {
+   max-width: 1140px;
+   margin: 0 auto;
+   
+ }
+ </style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.css">
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.js"></script>

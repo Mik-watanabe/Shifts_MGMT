@@ -33,3 +33,16 @@ WorktimeSchedulerを開発するのに使用した言語・技術・ライブラ
 - MySQL
 - jQuery
 - [FullCalendar](https://fullcalendar.io/)
+
+# Usage
+
+- http://worktimescheduler.herokuapp.com/ にアクセス
+
+- デモユーザーでログイン
+    - Mail: `Watanabe@mail.com`
+    - Password: `34567890`
+
+- デモマネージャーでログイン
+    - Mail: `Sato@mail.com`
+    - Password: `12345678`
+
