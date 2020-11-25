@@ -26,7 +26,7 @@ class ManagerController extends Controller
             'date' => $date,
             'start' => $date.' '.$shift->shift_start,
             'end' => $date.' '.$shift->shift_end, 
-            'backgroundColor' => $shift->user->color,    
+            'backgroundColor' => $shift->user->color,     
         ];
 
         $showShifts[] = $newItem;

@@ -33,9 +33,10 @@
                                 </div>    
                             </form>
                          @endforeach
-                           
                 </div>
             </div>
+
+            <button type="button" onclick="history.back()" class="btn mt-3 btn_back">戻る</button>
         </div>
     </div>
 </div>
@@ -64,6 +65,17 @@
     
     .item-right{
         flex-basis:40%;
+    }
+
+    .btn_back {
+        width:100%; 
+        background-color: #61A284;
+        color:white;
+    }
+    
+    .btn_back:hover {
+        background-color: #84B8A0;
+        color: white;
     }
 
 
