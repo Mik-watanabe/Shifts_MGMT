@@ -80,6 +80,24 @@ class ShiftsTableSeeder extends Seeder
                 'shift_start' => $firstday->copy()->addDays(13)->setHour(7),
                 'shift_end' => $firstday->copy()->addDays(13)->setHour(13)
             ],
+            [
+                'user_id' => 4,
+                'shift_date' => $firstday->copy()->addDays(19),
+                'shift_start' => $firstday->copy()->addDays(13)->setHour(7),
+                'shift_end' => $firstday->copy()->addDays(13)->setHour(13)
+            ],
+            [
+                'user_id' => 4,
+                'shift_date' => $firstday->copy()->addDays(5),
+                'shift_start' => $firstday->copy()->addDays(5)->setHour(7),
+                'shift_end' => $firstday->copy()->addDays(5)->setHour(13)
+            ],
+            [
+                'user_id' => 4,
+                'shift_date' => $firstday->copy()->addDays(20),
+                'shift_start' => $firstday->copy()->addDays(20)->setHour(7),
+                'shift_end' => $firstday->copy()->addDays(20)->setHour(13)
+            ],
             
         ];
 
