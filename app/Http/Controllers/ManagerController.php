@@ -13,7 +13,7 @@ class ManagerController extends Controller
 
        return view('manager/index');
     }
-
+    
     public function showUserColor() 
     {
       //マネージャー以外のユーザーを獲得

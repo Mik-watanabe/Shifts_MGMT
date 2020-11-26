@@ -35,9 +35,8 @@
                          @endforeach
                 </div>
             </div>
-
-            <button type="button" onclick="history.back()" class="btn mt-3 btn_back">戻る</button>
-        </div>
+            
+            <a id="btn" href="/admin/home" class="btn btn_back mt-4">戻る</a>
     </div>
 </div>
 
