@@ -24,7 +24,7 @@ Managers can see all the shifts proposed by workers on a calendar so they can un
 <br>
 <br>
 
-![User_demo](https://user-images.githubusercontent.com/69225308/100397665-44a3b200-308e-11eb-9bc2-561d4e7c220f.gif)
+![User_demo](https://user-images.githubusercontent.com/69225308/100397808-1e324680-308f-11eb-91fe-c5f653bc8413.gif)
 
 ◆Managers<br>
 - Managers have a calendar overview of the shift schedule, and the shift applications of the employees.<br>
@@ -33,7 +33,7 @@ Managers can see all the shifts proposed by workers on a calendar so they can un
 <br>
 <br>
 
-![Manager_demo](https://user-images.githubusercontent.com/69225308/100397808-1e324680-308f-11eb-91fe-c5f653bc8413.gif)
+![Manager_demo](https://user-images.githubusercontent.com/69225308/100397665-44a3b200-308e-11eb-9bc2-561d4e7c220f.gif)
 
 
 # Dependency
