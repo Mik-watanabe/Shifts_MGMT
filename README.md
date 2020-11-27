@@ -5,44 +5,56 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+</p>    
 
 # About Worktime Scheduler :
 
-シフト管理システムは、アルバイトのシフト管理の効率化を目的として制作。
-アルバイトは、カレンダー形式のアプリを通じて、希望のシフト時間を提出でき、一方で、マネージャーは全てのアルバイトの希望シフト時間をカレンダー上で一度に把握することができる。
+Worktime Scheduler is an app made for the purpose of easily facilitating shift schedules, and offering workers an easy way to submit and manage their own shifts.<br>
+Workers, through this app, can submit their ideal shift schedule.<br>
+Managers can see all the shifts proposed by workers on a calendar so they can understand the needs and patterns of their employees.
 
-# Features :
+(シフト管理システムは、アルバイトのシフト管理の効率化を目的として制作。
+アルバイトは、カレンダー形式のアプリを通じて、希望のシフト時間を提出でき、一方で、マネージャーは全てのアルバイトの希望シフト時間をカレンダー上で一度に把握することができる。)
 
-### アルバイト側：
-カレンダーに希望のシフト時間を入力・削除することができる。
+# Demo :
 
-### マネージャー側：
-・すべてのアルバイトの希望シフトが１つのカレンダー上で表示され、把握することができる。
+◆Workers<br>
 
-・各アルバイトのシフトを色付けすることができる。
+- When you click your ideal date, you will be offered a further option to manually input the beginning and end times of your shift. You are also able to delete the shift you put forward by clicking shifttime.
+<br>
+<br>
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/69225308/100397665-44a3b200-308e-11eb-9bc2-561d4e7c220f.gif)
 
-・アルバイトのメールを入力することで、新規追加の招待メールがアルバイトの元へ届き
-、新規登録をすることができる。
+◆Managers<br>
+- Managers have a calendar overview of the shift schedule, and the shift applications of the employees.<br>
+- They can easily invite new employees to access the scheduler, and grant specific access through the use of a single email invitation.<br>
+- With custom color coding tools, managers can identify each employee with ease and process the months schedule in a larger perspective.
+<br>
+<br>
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/69225308/100397808-1e324680-308f-11eb-91fe-c5f653bc8413.gif)
 
 
 # Dependency
-WorktimeSchedulerを開発するのに使用した言語・技術・ライブラリなどを列挙する
+The applicatiion utilises
+<br>
+<br>
 - PHP 
 - Laravel
 - MySQL
 - jQuery
 - [FullCalendar](https://fullcalendar.io/)
+<br>
+<br>
 
 # Usage
 
-- http://worktimescheduler.herokuapp.com/ にアクセス
+- Here is the link to access this app, https://worktimescheduler.herokuapp.com/ 
 
-- デモユーザーでログイン
+- Log into using **the demo user system**
     - Mail: `Watanabe@mail.com`
     - Password: `34567890`
 
-- デモマネージャーでログイン
+- Log into using **the demo manager system**
     - Mail: `Sato@mail.com`
     - Password: `12345678`
 
