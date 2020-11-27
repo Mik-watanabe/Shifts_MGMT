@@ -23,7 +23,7 @@ Managers can see all the shifts proposed by workers on a calendar so they can un
 - When you click your ideal date, you will be offered a further option to manually input the beginning and end times of your shift. You are also able to delete the shift you put forward by clicking shifttime.
 <br>
 <br>
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/69225308/100397665-44a3b200-308e-11eb-9bc2-561d4e7c220f.gif)
+![User_demo](https://user-images.githubusercontent.com/69225308/100397665-44a3b200-308e-11eb-9bc2-561d4e7c220f.gif)
 
 ◆Managers<br>
 - Managers have a calendar overview of the shift schedule, and the shift applications of the employees.<br>
@@ -31,7 +31,7 @@ Managers can see all the shifts proposed by workers on a calendar so they can un
 - With custom color coding tools, managers can identify each employee with ease and process the months schedule in a larger perspective.
 <br>
 <br>
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/69225308/100397808-1e324680-308f-11eb-91fe-c5f653bc8413.gif)
+![Manager_demo](https://user-images.githubusercontent.com/69225308/100397808-1e324680-308f-11eb-91fe-c5f653bc8413.gif)
 
 
 # Dependency
